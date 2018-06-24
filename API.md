@@ -222,8 +222,8 @@ Optionally the user can also provide a POJO with extra modifiers for the event.
 **Parameters**
 
 -   `target` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Element](https://developer.mozilla.org/docs/Web/API/Element))** the element or selector to trigger the event on
--   `eventType` **(`"keydown"` \| `"keyup"` \| `"keypress"`)** the type of event to trigger
--   `key` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))** the `keyCode`(number) or `key`(string) of the event being triggered
+-   `eventType` **(`"keydown"` \| `"keyup"` \| `"keypress"`)** the type of event to trigger. When comibed with `modifiers`, the `"keypress"` event won't trigger the key event as mentioned in the [jQuery docs](https://api.jquery.com/keypress/). Consider using `"keydown"` for those cases.
+-   `key` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))** the `keyCode`(number) or `key`(string) of the event being triggered.
 -   `modifiers` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** the state of various modifier keys (optional, default `DEFAULT_MODIFIERS`)
     -   `modifiers.ctrlKey` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** if true the generated event will indicate the control key was pressed during the key event (optional, default `false`)
     -   `modifiers.altKey` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** if true the generated event will indicate the alt key was pressed during the key event (optional, default `false`)
